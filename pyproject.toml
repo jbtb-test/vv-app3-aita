@@ -43,6 +43,11 @@ ai = [
   "openai>=2.14.0",
 ]
 
+dev = [
+  "pytest>=9.0.0",
+  "pytest-cov>=5.0.0",
+]
+
 [tool.setuptools]
 # Indique que les packages Python sont situés dans le dossier src/
 # (layout recommandé pour éviter les imports implicites)
