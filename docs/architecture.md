@@ -211,27 +211,3 @@ APP3 AITA démontre :
 
 L’outil est conçu pour être compris en quelques minutes,
 sans prérequis techniques.
-
-
----
-
-##
-
----
-
-##
-
-
----
-
-##
-
-
----
-
-##
-
-
----
-
-##
