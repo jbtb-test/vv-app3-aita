@@ -1,18 +1,16 @@
 # APP3 — AITA (AI-assisted Test Ideas & Traceability Accelerator)
 
-
-la suite est APP2 a modifier/adapter pour APP3
-
 ## TL;DR — Démo en 1 phrase
-Outil de **traçabilité Exigences ↔ Cas de test** (type DOORS / Polarion) qui construit automatiquement une **matrice de traçabilité**,
-calcule des **KPI de couverture** (exigences non couvertes, tests orphelins) et génère un **rapport HTML démontrable**,
-avec **IA optionnelle et non décisionnelle** pour suggérer des liens manquants.
+Outil orienté **test design (ISTQB)** qui génère un **pack de cas de test** (MD/JSON) à partir d’exigences,
+avec **IA optionnelle et non décisionnelle** pour suggérer des idées de tests,
+et des **outputs démontrables** (pack + rapport HTML) consultables sur GitHub.
 
-**But :** fiabiliser et démontrer la couverture de tests grâce à un **pipeline outillé** :
-- construction de la traçabilité via **moteur déterministe**
-- calcul automatique des **KPI de couverture**
+**But :** démontrer une démarche de **conception de tests outillée**, alignée ISTQB,
+à partir d’exigences, grâce à un **pipeline maîtrisé** :
+- analyse déterministe des exigences
+- génération structurée de cas de test
 - suggestions **optionnelles** via IA
-- génération d’outputs démontrables (**CSV + HTML**)
+- production d’outputs démontrables (**MD / JSON / HTML**)
 
 > IA = **suggestion only** (jamais décisionnelle).  
 > L’application fonctionne **sans IA** par défaut.
@@ -20,41 +18,45 @@ avec **IA optionnelle et non décisionnelle** pour suggérer des liens manquants
 ---
 
 ## Problème métier
-La traçabilité et la couverture de tests sont souvent :
-- dispersées (Excel, ALM, liens manuels)
-- fragiles (exigences non couvertes, tests orphelins)
-- difficiles à auditer rapidement
-- peu démontrables en entretien sans **matrice claire ni KPI synthétiques**
+La conception de tests est souvent :
+- très dépendante de l’expérience individuelle
+- peu formalisée et difficile à auditer
+- réalisée dans des outils hétérogènes (Excel, ALM, texte libre)
+- complexe à démontrer en entretien sans **exemples concrets et traçables**
+
+Les exigences sont disponibles,
+mais la **transformation en cas de test exploitables** reste peu outillée.
 
 ---
 
 ## Valeur apportée
-- **Couverture mesurée** : KPI calculés automatiquement et auditables
-- **Détection des écarts** : exigences non couvertes, tests orphelins
-- **Traçabilité V&V** : règles explicites, validation des datasets, tests unitaires
-- **Démo portfolio** : rapport HTML consultable + CSV exploitables sans exécuter le code
+- **Test design structuré** : génération de cas de test alignés ISTQB
+- **Traçabilité explicite** : chaque test est lié à une exigence source
+- **Gouvernance IA maîtrisée** : suggestions uniquement, jamais décisionnelles
+- **Démo portfolio** : packs de tests consultables sans exécuter le code
 
 ---
 
 ## Fonctionnement (pipeline résumé)
 
 1) **Entrées**  
-   CSV d’exigences + CSV de cas de test  
+   CSV d’exigences  
    (format proche DOORS / Polarion)
 
 2) **Analyse déterministe**  
-   Validation des datasets, construction de la matrice, calcul des KPI
+   Validation des données, extraction des intentions de test,
+   structuration des cas de test
 
 3) **IA (optionnelle)**  
-   Suggestions de **liens manquants**  
-   (non décisionnelles, aucune création ou modification automatique)
+   Suggestions d’**idées de tests complémentaires**  
+   (non décisionnelles, aucune création automatique)
 
 4) **Sorties**
-   - Matrice de traçabilité (CSV)
-   - KPI de couverture (CSV)
-   - Rapport HTML (consultable)
+   - Pack de tests en Markdown
+   - Pack structuré en JSON
+   - Rapport HTML de synthèse
 
-> L’IA est **optionnelle**, **non bloquante**, et **n’influence jamais les KPI**.
+> L’IA est **optionnelle**, **non bloquante**, et **n’influence jamais la structure finale**.
 
 ---
 
@@ -69,6 +71,7 @@ pip install -e ".[dev]"
 # option IA
 pip install -e ".[dev,ai]"
 ```
+
 
 ## Tests (CI-friendly)
 ```bash
@@ -91,9 +94,9 @@ Ouvrir :
 
 Accès direct :
 - **Sans IA (moteur déterministe)**  
-  `docs/demo/assets/outputs_no_ai/tctc_report.html`
+  `docs/demo/assets/outputs_no_ai/`
 - **Avec IA (suggestions gouvernées)**  
-  `docs/demo/assets/outputs_ai/tctc_report.html`
+  `docs/demo/assets/outputs_ai/`
 
 Des captures d’écran sont disponibles dans :
 `docs/demo/assets/screenshots/`
@@ -101,44 +104,44 @@ Des captures d’écran sont disponibles dans :
 👉 Point d’entrée unique :
 - `docs/demo/README.md`
 
+
 ---
 
 ### Option B — Reproduire localement (sans IA, recommandé)
 
-Cette option correspond au mode nominal de l’outil (100 % déterministe).
+Ce mode correspond au fonctionnement nominal de l’outil
+(100 % déterministe, IA désactivée).
 
 ```bash
-python -m vv_app2_tctc.main --out-dir data/outputs --verbose
+python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ```
 
 Génère automatiquement :
-- `data/outputs/traceability_matrix.csv`
-- `data/outputs/kpi_summary.csv`
-- `data/outputs/tctc_report.html`
-- `data/outputs/ai_suggestions.csv` (optionnel, si IA effective + suggestions)
+- Pack de tests Markdown
+- Pack JSON structuré
+- Rapport HTML de synthèse
 
 Ouvrir le fichier HTML généré dans un navigateur.
 
+---
+
 ### Option C — Mode IA (optionnel, avancé)
 
-Copier `.env.example` en `.env` et renseigner les valeurs localement.  
+Copier `.env.example` en `.env.secret` et renseigner les valeurs localement.  
 ⚠️ Ne jamais committer `.env` / `.env.*` (seul `.env.example` est versionné).
 
 ```powershell
 . .\tools\load_env_secret.ps1
 $env:ENABLE_AI="1"
-python -m vv_app2_tctc.main --out-dir data/outputs --verbose
+python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ```
-
-> L’IA fournit uniquement des suggestions de liens.
-> Elle ne crée ni ne modifie automatiquement la traçabilité.
 
 ## Structure du projet
 
 ```text
-vv-app2-tctc/
+vv-app3-aita/
 ├─ src/
-│  └─ vv_app2_tctc/
+│  └─ vv_app3_aita/
 ├─ tests/
 ├─ data/
 │  └─ inputs/
@@ -146,6 +149,8 @@ vv-app2-tctc/
 │  └─ demo/
 └─ README.md
 ```
+> Les dépendances et environnements sont gérés via `pyproject.toml`.
+> Les fichiers `requirements*.txt` sont fournis à titre informatif et de traçabilité.
 
 ---
 
