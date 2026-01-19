@@ -1,8 +1,0 @@
-# requirements.txt (information / compatibility)
-# Source of truth: pyproject.toml
-#
-# Recommended installs:
-#   pip install -e ".[dev]"        # dev/test
-#   pip install -e ".[dev,ai]"     # dev/test + AI (optional)
-#
-# requirements.lock.txt is a local venv snapshot (pip freeze).

@@ -2,33 +2,15 @@
 # -*- coding: utf-8 -*-
 """
 ============================================================
-_TEMPLATE_PYTHON_MODULE.py
+vv_app3_aita.main
 ------------------------------------------------------------
 Description :
-    Template standard de module Python pour les repos APP
-    du projet "V&V IA" (APP1_QRA / APP2_TCTC / APP3_AITA).
+    APP3 AITA — baseline skeleton (standardization phase only).
+    Aucun code métier (test design/IA) à ce stade.
 
-Rôle :
-    - Fournir une structure de code homogène (docstring, exceptions, logs,
-      fonctions, point d’entrée CLI) conforme à la méthode V&V.
-    - Le code métier sera implémenté dans les phases applicatives.
-
-Architecture :
-    - Emplacement cible des modules : src/<package_name>/
-    - Tests unitaires : tests/
-    - Données : data/
-    - Docs : docs/
-    - Outils : tools/
-
-Usage CLI (exemple) :
-    python -m <package_name>.<module>
-
-Usage test (exemple) :
+Usage :
+    python -m vv_app3_aita.main
     pytest -q
-
-Notes :
-    - Aucun import projet "dur" ici (pour éviter erreurs avant implémentation).
-    - Le logger est local et autonome à ce template.
 ============================================================
 """
 
@@ -77,10 +59,6 @@ class ModuleError(Exception):
 # ============================================================
 @dataclass
 class ProcessResult:
-    """
-    Exemple de structure de sortie standardisée.
-    À adapter selon les besoins de l’app.
-    """
     ok: bool
     payload: Dict[str, Any]
     message: Optional[str] = None
@@ -91,49 +69,22 @@ class ProcessResult:
 # ============================================================
 def process(data: Dict[str, Any]) -> ProcessResult:
     """
-    Fonction principale du module.
-
-    Args:
-        data: dictionnaire de données en entrée (à définir par app).
-    Returns:
-        ProcessResult: résultat standardisé.
-    Raises:
-        ModuleError: en cas d’erreur (validation entrée, logique, etc.)
+    Baseline process (standardization only).
     """
-    try:
-        if not isinstance(data, dict):
-            raise ModuleError("Invalid input: 'data' must be a dict.")
+    if not isinstance(data, dict):
+        raise ModuleError("Invalid input: 'data' must be a dict.")
 
-        log.info("Démarrage traitement module (template)...")
-
-        # TODO: implémenter la logique métier dans les phases APP
-        result_payload = dict(data)
-
-        return ProcessResult(ok=True, payload=result_payload, message="OK")
-
-    except ModuleError:
-        # Erreurs métier déjà typées → on relance
-        raise
-    except Exception as e:
-        log.exception("Erreur inattendue dans process()")
-        raise ModuleError(str(e)) from e
+    log.info("APP3 baseline process (no business logic yet).")
+    return ProcessResult(ok=True, payload=dict(data), message="OK")
 
 
 # ============================================================
-# ▶️ Main (debug seulement)
+# ▶️ Main
 # ============================================================
-def main() -> None:
-    """
-    Point d’entrée CLI pour debug local.
-
-    Exemple :
-        python src/<package_name>/<module>.py
-    """
-    log.info("=== Exécution directe du module (template) ===")
-    sample = {"test": True}
-    out = process(sample)
-    log.info(f"Résultat : ok={out.ok}, message={out.message}, payload={out.payload}")
+def main() -> int:
+    out = process({"baseline": True})
+    return 0 if out.ok else 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
