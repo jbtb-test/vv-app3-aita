@@ -24,6 +24,7 @@ import logging
 import os
 import sys
 from pathlib import Path
+from typing import Optional
 
 from vv_app3_aita.models import ModelError, Requirement, TestIdea, TestCase
 from vv_app3_aita.checklist import generate_test_ideas
@@ -38,11 +39,13 @@ from vv_app3_aita.export import export_test_pack_json, export_test_pack_md
 def get_logger(name: str) -> logging.Logger:
     logger = logging.getLogger(name)
     if not logger.handlers:
-        handler = logging.StreamHandler()
+        handler = logging.StreamHandler(stream=sys.stderr)
         formatter = logging.Formatter("%(asctime)s [%(levelname)s] [%(name)s] %(message)s")
         handler.setFormatter(formatter)
         logger.addHandler(handler)
         logger.setLevel(logging.INFO)
+        # Avoid double logging when embedded or when root logger is configured elsewhere.
+        logger.propagate = False
     return logger
 
 
@@ -96,26 +99,41 @@ def load_requirements_csv(path: Path) -> list[Requirement]:
     return reqs
 
 
+from typing import Optional
+
 def build_ideas(requirements: list[Requirement], *, enable_ai: bool) -> list[TestIdea]:
     """
     Build test ideas from checklist + optional AI.
-    Deterministic ordering, AI never blocks.
+
+    - Deterministic ordering
+    - AI is suggestion-only and never blocks
+    - No permanent side-effect on environment variables
     """
     ideas: list[TestIdea] = []
 
-    # Checklist ideas (deterministic)
+    # Checklist ideas (deterministic, always executed)
     for r in requirements:
         ideas.extend(generate_test_ideas(r))
 
-    # Optional AI ideas: enable via env var to match ia_assistant contract
-    os.environ["ENABLE_AI"] = "1" if enable_ai else "0"
-    if enable_ai:
-        for r in requirements:
-            ideas.extend(generate_ai_test_ideas(r))
+    # Optional AI ideas
+    # Temporarily align with ia_assistant contract via env var,
+    # then restore previous state to avoid global side-effects.
+    previous_enable_ai: Optional[str] = os.getenv("ENABLE_AI")
+    try:
+        os.environ["ENABLE_AI"] = "1" if enable_ai else "0"
+        if enable_ai:
+            for r in requirements:
+                ideas.extend(generate_ai_test_ideas(r))
+    finally:
+        if previous_enable_ai is None:
+            os.environ.pop("ENABLE_AI", None)
+        else:
+            os.environ["ENABLE_AI"] = previous_enable_ai
 
     # Stable sort for auditability
     ideas.sort(key=lambda i: (i.requirement_id, i.category.upper(), i.idea_id))
     return ideas
+
 
 
 # ============================================================
