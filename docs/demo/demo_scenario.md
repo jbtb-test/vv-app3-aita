@@ -10,7 +10,7 @@ Il montre la valeur de l’outil pour le **test design (conception de tests)** �
 
 - Illustrer une **démarche de test design structurée (ISTQB)**
 - Montrer la transformation **exigences → cas de test**
-- Montrer des **outputs concrets** (Markdown / JSON / HTML)
+- Montrer des **outputs concrets** (Markdown / JSON )
 - Insister sur la **maîtrise humaine** et la **non-décision IA**
 
 ---
@@ -49,36 +49,28 @@ python -m vv_app3_aita.main --verbose
 
 ---
 
-### ⏱️ 1:00 – 1:45 — Résultats (pack de tests)
+### ⏱️ 1:00 – 2:30 — Résultats (pack de tests)
 
-Ouvrir les outputs générés :
-- Pack de tests **Markdown**
-- Pack structuré **JSON**
+1. **Baseline**
+   - Ouvrir `assets/outputs_no_ai/tests.md`
+   - Expliquer la génération via checklist ISTQB.
 
-**Chaque cas de test est explicitement lié à une exigence.  
-Les axes de test sont visibles et justifiables.**
+2. **IA en complément**
+   - Ouvrir `assets/outputs_ai/tests.md`
+   - Montrer les tests supplémentaires taggés IA.
 
-C’est un support orienté **revue, audit et entretien**.
+3. **Gouvernance**
+   - Ouvrir `assets/outputs_ai/ai_suggestions.md`
+   - Insister sur “suggestion-only”, traçabilité, non-blocage.
 
 ---
-
-### ⏱️ 1:45 – 2:30 — Rapport HTML
-
-Ouvrir le rapport HTML localement.
-
-**Ce rapport est lisible sans outil spécifique.  
-Il synthétise les exigences analysées et les cas de test générés.**
-
-Points à montrer :
-- structuration des cas de test
-- traçabilité exigence → test
-- lisibilité globale du test design
 
 ### ⏱️ 2:30 – 3:00 — Conclusion
 
 ---
 
-**L’outil ne prend aucune décision.  
+**L’outil ne prend aucune décision.
+L’IA **augmente la couverture** sans jamais prendre de décision.
 Il structure, formalise et rend démontrable le test design.**
 
 Optionnel :

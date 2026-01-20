@@ -10,7 +10,7 @@ d’exigences, en appliquant une démarche **alignée ISTQB**.
 L’outil transforme des exigences en :
 - **cas de test structurés**
 - **packs de tests exploitables**
-- **preuves démontrables** (MD / JSON / HTML)
+- **preuves démontrables** (MD / JSON )
 
 APP3 AITA ne remplace pas l’ingénieur test :
 il **structure** et **rend démontrable** le test design.
@@ -19,15 +19,7 @@ il **structure** et **rend démontrable** le test design.
 
 ## Dois-je exécuter le code pour comprendre la démo ?
 
-Non.
-
-Un **pack de démonstration figé** est fourni dans `docs/demo/` :
-- rapport HTML
-- packs de tests
-- captures d’écran
-
-Il est **consultable directement sur GitHub**,
-sans installer ni exécuter Python.
+Non. Les packs de tests sont **figés** en Markdown/JSON dans `docs/demo/assets/`.
 
 ---
 
@@ -70,8 +62,7 @@ L’IA n’est **jamais critique** pour l’exécution.
 
 - Pack de cas de test **Markdown**
 - Pack structuré **JSON**
-- Rapport **HTML** de synthèse
-- (optionnel) Suggestions IA clairement identifiées
+- Suggestions IA clairement identifiées si l'IA est activé.
 
 Tous les livrables sont exploitables
 hors de l’outil (revue, audit, entretien).

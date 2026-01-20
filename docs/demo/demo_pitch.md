@@ -56,10 +56,7 @@ APP3 — AITA génère automatiquement :
 
 - un **pack de cas de test Markdown** (lisible humainement),
 - un **pack structuré JSON** (exploitable par outils QA / ALM),
-- un **rapport HTML** de synthèse.
-
-Un rapport HTML de démonstration est fourni dans  
-`docs/demo/assets/outputs_no_ai/aita_report.html`  
+ 
 (voir `docs/demo/README.md`).
 
 ---

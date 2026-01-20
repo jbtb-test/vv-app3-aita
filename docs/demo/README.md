@@ -26,7 +26,6 @@ Ces exigences constituent l’unique entrée du pipeline.
 
 Conception de tests **sans IA**, 100 % déterministe.
 
-- Rapport HTML : `assets/outputs_no_ai/aita_report.html`
 - Pack de tests Markdown : `assets/outputs_no_ai/tests.md`
 - Pack structuré JSON : `assets/outputs_no_ai/tests.json`
 
@@ -40,29 +39,16 @@ Conception de tests **sans IA**, 100 % déterministe.
 Même pipeline que le mode sans IA, avec en plus des
 **suggestions d’idées de tests complémentaires**.
 
-- Rapport HTML : `assets/outputs_ai/aita_report.html`
 - Pack de tests Markdown : `assets/outputs_ai/tests.md`
 - Pack structuré JSON : `assets/outputs_ai/tests.json`
-- (optionnel) Suggestions IA : `assets/outputs_ai/ai_suggestions.md`
+- Suggestions IA : `assets/outputs_ai/ai_suggestions.md`
 
 ➡️ L’IA **n’altère pas** les cas de test générés.  
 ➡️ Elle **propose uniquement**, sans décision automatique.
 
 ---
 
-## 4) Screenshots (PNG)
-
-Captures prêtes pour aperçu GitHub :
-
-- Sans IA : `assets/screenshots/no_ai_report.png`
-- Avec IA : `assets/screenshots/ai_report.png`
-
-Ces images permettent une **lecture rapide en entretien**
-sans ouvrir les fichiers HTML.
-
----
-
-## 5) Exécution locale (optionnelle) — génération runtime
+## 4) Exécution locale (optionnelle) — génération runtime
 
 ### Sans IA (déterministe)
 

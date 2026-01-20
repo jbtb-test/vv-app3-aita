@@ -20,12 +20,12 @@ Cette étape montre la valeur de l’outil **sans dépendre de l’environnement
 ### Action
 
 1) **Sans IA (test design déterministe)**
-- Ouvrir : `docs/demo/assets/outputs_no_ai/report.html`
-- Ou aperçu PNG : `docs/demo/assets/screenshots/no_ai_report.png`
+- `assets/outputs_no_ai/tests.md`
+- `assets/outputs_no_ai/tests.json`
 
 2) **Avec IA (suggestion-only)**
-- Ouvrir : `docs/demo/assets/outputs_ai/report.html`
-- Ou aperçu PNG : `docs/demo/assets/screenshots/ai_report.png`
+- `assets/outputs_ai/tests.md`
+- `assets/outputs_ai/tests.json`
 
 ### À montrer
 
@@ -61,7 +61,6 @@ python -m vv_app3_aita.main --out-dir data/outputs --verbose
 Résultats générés (runtime) :
 - pack de tests Markdown
 - pack structuré JSON
-- rapport HTML de synthèse
 
 ### À montrer
 

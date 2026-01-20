@@ -1,0 +1,680 @@
+{
+  "meta": {
+    "count": 32,
+    "format": "vv-app3-aita.test-pack.v1"
+  },
+  "tests": [
+    {
+      "test_id": "TC-REQAITA001-AI-688713ad",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[AI] Authentication utilisateur",
+      "description": "Idea: IA-suggested edge case scenario\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: AI",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: IA-suggested edge case scenario.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-AI-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-BOUNDARY-35df9f1c",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[BOUNDARY] Authentication utilisateur",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-BOUNDARY-39f6ce9d",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[BOUNDARY] Authentication utilisateur",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-NEGATIVE-1bcf44ec",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[NEGATIVE] Authentication utilisateur",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-NEGATIVE-850a4f32",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[NEGATIVE] Authentication utilisateur",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-POSITIVE-a668fc39",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[POSITIVE] Authentication utilisateur",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-ROBUSTNESS-7df155d4",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[ROBUSTNESS] Authentication utilisateur",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA001-SECURITY-2922081e",
+      "requirement_id": "REQ-AITA-001",
+      "title": "[SECURITY] Authentication utilisateur",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-001-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-AI-47e8dcd3",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[AI] Refus accès invalide",
+      "description": "Idea: IA-suggested edge case scenario\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: AI",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: IA-suggested edge case scenario.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-AI-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-BOUNDARY-62f0282a",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[BOUNDARY] Refus accès invalide",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-BOUNDARY-cde8d9db",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[BOUNDARY] Refus accès invalide",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-NEGATIVE-4f776ad3",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[NEGATIVE] Refus accès invalide",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-NEGATIVE-dab50c53",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[NEGATIVE] Refus accès invalide",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-POSITIVE-085ba0f2",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[POSITIVE] Refus accès invalide",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-ROBUSTNESS-cf163d49",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[ROBUSTNESS] Refus accès invalide",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA002-SECURITY-c778e083",
+      "requirement_id": "REQ-AITA-002",
+      "title": "[SECURITY] Refus accès invalide",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-002-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-AI-76955666",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[AI] Verrouillage après échecs",
+      "description": "Idea: IA-suggested edge case scenario\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: AI",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: IA-suggested edge case scenario.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-AI-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-BOUNDARY-40c9c996",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[BOUNDARY] Verrouillage après échecs",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-BOUNDARY-7dfc8635",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[BOUNDARY] Verrouillage après échecs",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-NEGATIVE-c72f51bc",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[NEGATIVE] Verrouillage après échecs",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-NEGATIVE-f7b2baf8",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[NEGATIVE] Verrouillage après échecs",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-POSITIVE-f883ebe6",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[POSITIVE] Verrouillage après échecs",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-ROBUSTNESS-0f1add6d",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[ROBUSTNESS] Verrouillage après échecs",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA003-SECURITY-c8e75bd0",
+      "requirement_id": "REQ-AITA-003",
+      "title": "[SECURITY] Verrouillage après échecs",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-003-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-AI-3e0f6afb",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[AI] Journalisation des accès",
+      "description": "Idea: IA-suggested edge case scenario\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: AI",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: IA-suggested edge case scenario.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-AI-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-BOUNDARY-364a6e6e",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[BOUNDARY] Journalisation des accès",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-BOUNDARY-c1c7e8ab",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[BOUNDARY] Journalisation des accès",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-NEGATIVE-cad49f71",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[NEGATIVE] Journalisation des accès",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-NEGATIVE-d65025f7",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[NEGATIVE] Journalisation des accès",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-POSITIVE-45ffff73",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[POSITIVE] Journalisation des accès",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-ROBUSTNESS-a20f47e5",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[ROBUSTNESS] Journalisation des accès",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQAITA004-SECURITY-a7ac0456",
+      "requirement_id": "REQ-AITA-004",
+      "title": "[SECURITY] Journalisation des accès",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-AITA-004-SEC-1"
+      ]
+    }
+  ]
+}
