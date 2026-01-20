@@ -14,7 +14,7 @@ L’objectif est de :
 - appliquer une **démarche de test design alignée ISTQB**
 - produire un **pack de tests exploitable** (Markdown / JSON)
 - garantir une **traçabilité explicite exigence → test**
-- fournir des **preuves auditables** (pack + rapport HTML)
+- fournir des **preuves auditables** (pack + rapport)
 - démontrer une **maîtrise humaine totale** des décisions
 
 APP3 AITA est conçu comme un **outil d’aide à la conception de tests**,
@@ -74,11 +74,7 @@ CSV exigences
         [ Pack JSON ]
                 |
                 v
-        [ Rapport HTML ]
-                |
-                v
-         Revue humaine
-
+        [ Revue humaine ]
 
 ---
 
@@ -123,7 +119,10 @@ Les exigences invalides sont rejetées avant toute conception de tests.
 
 ### 4.5 Test design déterministe (cœur de l’application)
 
-- Implémenté dans `test_design.py` (ou équivalent)
+- Implémenté via :
+  - `checklist.py` (axes ISTQB déterministes)
+  - `generator.py` (génération des cas de test)
+
 - Rôle :
   - analyser l’intention de l’exigence
   - identifier les axes de test (fonctionnel, limites, erreurs, etc.)
@@ -168,10 +167,6 @@ L’IA est un **outil d’inspiration**, jamais une autorité.
 - Structure exploitable par outils QA / ALM
 - Base pour automatisation ultérieure
 
-**HTML**
-- Rapport de synthèse
-- Support principal de démonstration recruteur
-
 ---
 
 ## 5. Exécution
@@ -184,7 +179,6 @@ python -m vv_app3_aita.main --verbose
 Résultats :
 - Pack Markdown de tests
 - Pack JSON structuré
-- Rapport HTML
 - Logs explicites
 
 ---

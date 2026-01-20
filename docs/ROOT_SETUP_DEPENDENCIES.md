@@ -26,7 +26,7 @@ pip install -e ".[dev]"
 pip install -e ".[dev,ai]"
 
 # Exécution de référence
-python -m vv_app3_aita.main --out-dir data\outputs --verbose
+python -m vv_app3_aita.main --input data/inputs/requirements.csv --out-dir data\outputs --verbose
 
 # Tests
 pytest -vv

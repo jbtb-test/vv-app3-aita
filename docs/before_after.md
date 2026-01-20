@@ -50,7 +50,7 @@ L’objectif est d’illustrer :
 4. Application d’une logique de test design structurée
 5. Génération de cas de test alignés ISTQB
 6. (Optionnel) Suggestions IA d’idées de tests complémentaires
-7. Génération d’outputs structurés (MD + JSON + HTML)
+7. Génération d’outputs structurés (MD + JSON)
 8. Revue humaine et décision
 
 ---

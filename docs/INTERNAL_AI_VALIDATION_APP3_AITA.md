@@ -43,7 +43,6 @@ L’IA ne peut en aucun cas :
 - Génération complète :
   - pack de tests Markdown
   - pack JSON
-  - rapport HTML
 
 ➡️ **Comportement nominal de référence**
 ➡️ Aucun appel IA

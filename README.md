@@ -3,14 +3,14 @@
 ## TL;DR — Démo en 1 phrase
 Outil orienté **test design (ISTQB)** qui génère un **pack de cas de test** (MD/JSON) à partir d’exigences,
 avec **IA optionnelle et non décisionnelle** pour suggérer des idées de tests,
-et des **outputs démontrables** (pack + rapport HTML) consultables sur GitHub.
+et des **outputs démontrables** (pack + rapport) consultables sur GitHub.
 
 **But :** démontrer une démarche de **conception de tests outillée**, alignée ISTQB,
 à partir d’exigences, grâce à un **pipeline maîtrisé** :
 - analyse déterministe des exigences
 - génération structurée de cas de test
 - suggestions **optionnelles** via IA
-- production d’outputs démontrables (**MD / JSON / HTML**)
+- production d’outputs démontrables (**MD / JSON **)
 
 > IA = **suggestion only** (jamais décisionnelle).  
 > L’application fonctionne **sans IA** par défaut.
@@ -54,7 +54,6 @@ mais la **transformation en cas de test exploitables** reste peu outillée.
 4) **Sorties**
    - Pack de tests en Markdown
    - Pack structuré en JSON
-   - Rapport HTML de synthèse
 
 > L’IA est **optionnelle**, **non bloquante**, et **n’influence jamais la structure finale**.
 
@@ -98,12 +97,8 @@ Accès direct :
 - **Avec IA (suggestions gouvernées)**  
   `docs/demo/assets/outputs_ai/`
 
-Des captures d’écran sont disponibles dans :
-`docs/demo/assets/screenshots/`
-
 👉 Point d’entrée unique :
 - `docs/demo/README.md`
-
 
 ---
 
@@ -119,9 +114,6 @@ python -m vv_app3_aita.main --out-dir data/outputs --verbose
 Génère automatiquement :
 - Pack de tests Markdown
 - Pack JSON structuré
-- Rapport HTML de synthèse
-
-Ouvrir le fichier HTML généré dans un navigateur.
 
 ---
 
@@ -149,6 +141,7 @@ vv-app3-aita/
 │  └─ demo/
 └─ README.md
 ```
+
 > Les dépendances et environnements sont gérés via `pyproject.toml`.
 > Les fichiers `requirements*.txt` sont fournis à titre informatif et de traçabilité.
 
