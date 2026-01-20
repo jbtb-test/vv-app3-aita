@@ -2,8 +2,6 @@
 
 Ce document interne décrit et valide l’intégration de l’IA dans **APP3 — AITA (AI-assisted Test Ideas & Traceability Accelerator)**.
 
-# INTERNAL — Validation intégration IA (APP3-AITA)
-
 ## Objectif
 
 Valider que l’intégration IA dans **APP3 — AITA** respecte les principes suivants :
