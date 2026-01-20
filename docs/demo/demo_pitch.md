@@ -81,6 +81,5 @@ le jugement ni l’expertise de l’ingénieur test.
 Il **structure**, **formalise** et **rend démontrable**
 la conception de tests.
 
-👉 Je peux vous montrer soit le **pack de tests et le rapport HTML de démonstration**,  
-👉 soit l’**exécution locale du pipeline**, en quelques secondes.
+> Je peux vous montrer soit le pack de tests Markdown/JSON de démonstration, soit l’exécution locale du pipeline, en quelques secondes.
 

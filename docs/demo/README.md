@@ -26,8 +26,8 @@ Ces exigences constituent l’unique entrée du pipeline.
 
 Conception de tests **sans IA**, 100 % déterministe.
 
-- Pack de tests Markdown : `assets/outputs_no_ai/tests.md`
-- Pack structuré JSON : `assets/outputs_no_ai/tests.json`
+- Pack de tests Markdown : `assets/outputs_no_ai/tests_pack.md`
+- Pack structuré JSON : `assets/outputs_no_ai/tests_pack.json`
 
 ➡️ Référence V&V : **reproductible, auditable, défendable en audit**.  
 ➡️ Les cas de test sont générés par une logique **alignée ISTQB**.
@@ -39,8 +39,8 @@ Conception de tests **sans IA**, 100 % déterministe.
 Même pipeline que le mode sans IA, avec en plus des
 **suggestions d’idées de tests complémentaires**.
 
-- Pack de tests Markdown : `assets/outputs_ai/tests.md`
-- Pack structuré JSON : `assets/outputs_ai/tests.json`
+- Pack de tests Markdown : `assets/outputs_ai/tests_pak.md`
+- Pack structuré JSON : `assets/outputs_ai/tests_pack.json`
 - Suggestions IA : `assets/outputs_ai/ai_suggestions.md`
 
 ➡️ L’IA **n’altère pas** les cas de test générés.  

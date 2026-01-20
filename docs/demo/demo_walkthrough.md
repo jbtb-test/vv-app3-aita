@@ -20,12 +20,12 @@ Cette étape montre la valeur de l’outil **sans dépendre de l’environnement
 ### Action
 
 1) **Sans IA (test design déterministe)**
-- `assets/outputs_no_ai/tests.md`
-- `assets/outputs_no_ai/tests.json`
+- `assets/outputs_no_ai/tests_pack.md`
+- `assets/outputs_no_ai/tests_pack.json`
 
 2) **Avec IA (suggestion-only)**
-- `assets/outputs_ai/tests.md`
-- `assets/outputs_ai/tests.json`
+- `assets/outputs_ai/tests_pack.md`
+- `assets/outputs_ai/tests_pack.json`
 
 ### À montrer
 

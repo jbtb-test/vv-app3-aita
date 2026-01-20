@@ -52,11 +52,11 @@ python -m vv_app3_aita.main --verbose
 ### ⏱️ 1:00 – 2:30 — Résultats (pack de tests)
 
 1. **Baseline**
-   - Ouvrir `assets/outputs_no_ai/tests.md`
+   - Ouvrir `assets/outputs_no_ai/tests_pack.md`
    - Expliquer la génération via checklist ISTQB.
 
 2. **IA en complément**
-   - Ouvrir `assets/outputs_ai/tests.md`
+   - Ouvrir `assets/outputs_ai/tests_pack.md`
    - Montrer les tests supplémentaires taggés IA.
 
 3. **Gouvernance**
