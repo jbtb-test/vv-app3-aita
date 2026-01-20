@@ -72,7 +72,9 @@ def test_generate_ai_test_ideas_enabled_but_missing_key_returns_empty(
         ideas = generate_ai_test_ideas(sample_requirement)
 
     assert ideas == []
-    assert any("OPENAI_API_KEY absente" in rec.message for rec in caplog.records)
+    assert any("OPENAI_API_KEY" in rec.message for rec in caplog.records)
+    assert any("ENABLE_AI" in rec.message or "IA" in rec.message for rec in caplog.records)
+
 
 
 def test_generate_ai_test_ideas_enabled_with_key_returns_stub_idea(
