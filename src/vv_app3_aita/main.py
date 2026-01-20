@@ -53,9 +53,8 @@ log = get_logger(__name__)
 # ============================================================
 # ⚠️ Exceptions spécifiques
 # ============================================================
-class MainError(Exception):
-    """Erreur spécifique au module main."""
-
+class ModuleError(Exception):
+    """Erreur spécifique au module main (contrat public pour les tests)."""
 
 # ============================================================
 # 🔧 Fonctions principales
@@ -103,7 +102,7 @@ def process(args: argparse.Namespace) -> None:
     log.debug("Arguments CLI: %s", args)
 
     if not args.input.exists():
-        raise MainError(f"Fichier d’entrée introuvable: {args.input}")
+        raise ModuleError(f"Fichier d’entrée introuvable: {args.input}")
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -126,7 +125,7 @@ def main(argv: list[str] | None = None) -> int:
         log.info("Fin APP3 AITA (no-op)")
         return 0
 
-    except MainError as e:
+    except ModuleError as e:
         log.error(str(e))
         return 1
     except Exception as e:
