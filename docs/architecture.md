@@ -90,7 +90,7 @@ Les exigences constituent l’unique source d’entrée.
 
 ### 4.2 Parser CSV
 
-- Implémenté dans `main.py`
+- Le parsing est orchestré par `main.py` et délégué aux composants métier.
 - Responsabilités :
   - lecture du CSV
   - validation de la structure minimale
