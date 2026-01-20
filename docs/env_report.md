@@ -1,17 +1,17 @@
 # Environment Healthcheck Report
 
-- Generated (UTC): **2026-01-12T19:51:25Z**
-- Verdict: **⚠️ CHECK**
+- Generated (UTC): **2026-01-20T10:20:19Z**
+- Verdict: **✅ HEALTHY**
 
 ## Checks
-- ❌ **Virtualenv détecté** — prefix=C:\Python314
-- ✅ **pip visible** — pip=25.2
+- ✅ **Virtualenv détecté** — prefix=C:\Users\bobby\python_test\vv-project\vv-app3-aita\venv
+- ✅ **pip visible** — pip=25.3
 - ✅ **project root détecté** — root=C:\Users\bobby\python_test\vv-project\vv-app3-aita
 
 ## Runtime
 - Python version: **3.14.0**
-- Python executable: `C:\Python314\python.exe`
-- Pip version: **25.2**
+- Python executable: `C:\Users\bobby\python_test\vv-project\vv-app3-aita\venv\Scripts\python.exe`
+- Pip version: **25.3**
 
 ## System
 - OS: **Windows 11**

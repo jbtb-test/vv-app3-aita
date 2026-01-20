@@ -1,0 +1,5 @@
+requirement_id,title,description,criticality,source
+REQ-AITA-001,Authentication utilisateur,Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.,HIGH,Stakeholder
+REQ-AITA-002,Refus accès invalide,Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.,HIGH,Stakeholder
+REQ-AITA-003,Verrouillage après échecs,"Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.",MEDIUM,Security
+REQ-AITA-004,Journalisation des accès,Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.,LOW,Audit

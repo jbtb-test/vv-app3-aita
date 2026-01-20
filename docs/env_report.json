@@ -1,12 +1,12 @@
 {
-  "timestamp_utc": "2026-01-12T19:51:25Z",
+  "timestamp_utc": "2026-01-20T10:20:19Z",
   "cwd": "C:\\Users\\bobby\\python_test\\vv-project\\vv-app3-aita",
   "project_root": "C:\\Users\\bobby\\python_test\\vv-project\\vv-app3-aita",
   "python_version": "3.14.0",
-  "python_executable": "C:\\Python314\\python.exe",
-  "pip_version": "25.2",
-  "is_venv": false,
-  "venv_prefix": "C:\\Python314",
+  "python_executable": "C:\\Users\\bobby\\python_test\\vv-project\\vv-app3-aita\\venv\\Scripts\\python.exe",
+  "pip_version": "25.3",
+  "is_venv": true,
+  "venv_prefix": "C:\\Users\\bobby\\python_test\\vv-project\\vv-app3-aita\\venv",
   "os_name": "Windows",
   "os_release": "11",
   "platform": "Windows-11-10.0.26200-SP0"

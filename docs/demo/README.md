@@ -1,90 +1,67 @@
-# APP1 QRA — Demo Pack (Recruteur)
+# APP3 AITA — Demo Pack (Recruteur)
 
 Ce dossier contient une **démonstration complète consultable sans exécuter le code**.
 
 Il permet de comparer :
-- le moteur **déterministe** de qualité des exigences
-- et la version **assistée par IA** (suggestion-only)
+- le mode **déterministe** (référence V&V / test design)
+- et le mode **assisté par IA** (suggestion-only, gouverné)
+
+L’objectif est de montrer une **conception de tests structurée**
+à partir d’exigences, avec des **preuves concrètes et auditables**.
 
 ---
 
-## 1) Input
+## 1) Inputs (datasets)
 
-Fichier d’entrée commun aux deux modes :
+Exports représentatifs d’outils de gestion des exigences
+(DOORS / Polarion / Jira).
 
-- `assets/inputs/demo_input.csv`
+- Exigences : `assets/inputs/requirements.csv`
 
-Il représente un export typique DOORS / Polarion (exigences système).
-
----
-
-## 2) Mode **Sans IA** — moteur déterministe
-
-Analyse basée **uniquement sur les règles métier QRA** (pas d’IA).
-
-- Rapport HTML :  
-  `assets/outputs_no_ai/rapport.html`
-
-- Export CSV :  
-  `assets/outputs_no_ai/results.csv`
-
-Contenu :
-- scores de qualité
-- statuts OK / À risque
-- défauts détectés (ambiguïté, testabilité, critères d’acceptation…)
-
-➡️ C’est la **référence V&V** (reproductible, auditée, traçable).
+Ces exigences constituent l’unique entrée du pipeline.
 
 ---
 
-## 3) Mode **Avec IA** — suggestions gouvernées
+## 2) Mode **Sans IA** — test design déterministe (référence)
 
-Même moteur déterministe, avec en plus des **suggestions IA non décisionnelles**.
+Conception de tests **sans IA**, 100 % déterministe.
 
-- Rapport HTML :  
-  `assets/outputs_ai/rapport.html`
+- Pack de tests Markdown : `assets/outputs_no_ai/tests.md`
+- Pack structuré JSON : `assets/outputs_no_ai/tests.json`
 
-- Export CSV :  
-  `assets/outputs_ai/results.csv`
-
-Contenu supplémentaire :
-- reformulations proposées
-- exemples de critères d’acceptation
-- compléments de vérifiabilité
-
-➡️ L’IA **n’altère jamais les scores** ni les statuts, elle **propose uniquement**.
+➡️ Référence V&V : **reproductible, auditable, défendable en audit**.  
+➡️ Les cas de test sont générés par une logique **alignée ISTQB**.
 
 ---
 
-## 4) Gouvernance IA (résumé)
+## 3) Mode **Avec IA** — suggestions gouvernées (optionnel)
 
-- IA **désactivée par défaut**
-- Activation contrôlée via variable d’environnement `ENABLE_AI`
-- Clé absente ou invalide → **fallback strict**
-- Le moteur QRA reste **100 % déterministe**
+Même pipeline que le mode sans IA, avec en plus des
+**suggestions d’idées de tests complémentaires**.
 
-➡️ L’IA est un **assistant**, jamais un décideur.
+- Pack de tests Markdown : `assets/outputs_ai/tests.md`
+- Pack structuré JSON : `assets/outputs_ai/tests.json`
+- Suggestions IA : `assets/outputs_ai/ai_suggestions.md`
 
----
-
-## 5) Lecture rapide
-
-Pour une revue rapide en entretien :
-
-- Sans IA → `assets/outputs_no_ai/rapport.html`
-- Avec IA → `assets/outputs_ai/rapport.html`
-
-Des captures PNG sont fournies dans :
-`assets/screenshots/`
+➡️ L’IA **n’altère pas** les cas de test générés.  
+➡️ Elle **propose uniquement**, sans décision automatique.
 
 ---
 
-## 6) Exécution locale (optionnelle) — outputs runtime
+## 4) Exécution locale (optionnelle) — génération runtime
 
-Si l’on exécute l’outil localement (`python -m vv_app1_qra.main`), il peut générer :
-- des **outputs runtime legacy timestampés** (ex: `qra_output_*.html` / `*.csv`) dans `data/outputs/`
-- et/ou un **rapport stable** (`rapport.html` + `results.csv`) selon le mode de génération.
+### Sans IA (déterministe)
 
-➡️ Pour un recruteur, la référence “sans exécuter” reste :
-- `assets/outputs_no_ai/rapport.html`
-- `assets/outputs_ai/rapport.html`
+```powershell
+$env:ENABLE_AI="0"
+python -m vv_app3_aita.main --out-dir data/outputs --verbose
+```
+
+### Avec IA (optionnel, avancé)
+```powershell
+. .\tools\load_env_secret.ps1
+$env:ENABLE_AI="1"
+python -m vv_app3_aita.main --out-dir data/outputs --verbose
+```
+
+> ➡️ Scénario 2–3 min : docs/demo_scenario.md
