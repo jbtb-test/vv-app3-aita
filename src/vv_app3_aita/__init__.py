@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 vv_app3_aita
@@ -19,6 +18,12 @@ Design constraints
 
 from __future__ import annotations
 
+from vv_app3_aita.models import Requirement, TestIdea, TestCase
+from vv_app3_aita.generator import generate_test_pack
+from vv_app3_aita.export import export_test_pack_md, export_test_pack_json
+
+__version__ = "1.0.0"
+
 __all__ = [
     "__version__",
     # Models
@@ -31,9 +36,3 @@ __all__ = [
     "export_test_pack_md",
     "export_test_pack_json",
 ]
-
-__version__ = "0.3.11"
-
-from vv_app3_aita.models import Requirement, TestIdea, TestCase
-from vv_app3_aita.generator import generate_test_pack
-from vv_app3_aita.export import export_test_pack_md, export_test_pack_json
