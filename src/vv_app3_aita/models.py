@@ -1,33 +1,42 @@
-# ============================================================
-# APP3 — AITA
-# ------------------------------------------------------------
-# File: models.py
-#
-# Rôle :
-#   Définition des modèles métier de l’application APP3 AITA.
-#
-#   Ces modèles représentent :
-#     - les exigences d’entrée
-#     - les idées de tests générées
-#     - les cas de test structurés exportables
-#
-#   Aucun traitement IA ici.
-#   Aucun effet de bord.
-# ============================================================
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+============================================================
+APP3 — AITA
+------------------------------------------------------------
+File: models.py
+
+Rôle :
+    Modèles métier de l’application APP3 AITA :
+      - Requirement
+      - TestIdea
+      - TestCase
+
+    Aucun traitement IA ici.
+============================================================
+"""
 
 from __future__ import annotations
 
+# ============================================================
+# 📦 Imports
+# ============================================================
 from dataclasses import dataclass, field
 from typing import List, Optional
 
 
-# ------------------------------------------------------------
-# Requirement
-# ------------------------------------------------------------
+# ============================================================
+# ⚠️ Exceptions spécifiques
+# ============================================================
+class ModelError(Exception):
+    """Erreur liée aux modèles métier."""
+
+
+# ============================================================
+# 🧩 Modèles
+# ============================================================
 @dataclass(frozen=True)
 class Requirement:
-    """Représente une exigence système d’entrée."""
-
     requirement_id: str
     title: str
     description: str
@@ -36,11 +45,9 @@ class Requirement:
 
     @classmethod
     def from_dict(cls, data: dict) -> "Requirement":
-        required_fields = ["requirement_id", "title", "description", "criticality"]
-
-        for field_name in required_fields:
-            if field_name not in data or not str(data[field_name]).strip():
-                raise ValueError(f"Missing or empty requirement field: {field_name}")
+        for key in ("requirement_id", "title", "description", "criticality"):
+            if key not in data or not str(data[key]).strip():
+                raise ModelError(f"Champ requis manquant: {key}")
 
         return cls(
             requirement_id=str(data["requirement_id"]).strip(),
@@ -51,30 +58,20 @@ class Requirement:
         )
 
 
-# ------------------------------------------------------------
-# TestIdea
-# ------------------------------------------------------------
 @dataclass(frozen=True)
 class TestIdea:
-    """Représente une idée de test (fonctionnelle ou non)."""
-
     idea_id: str
     requirement_id: str
     category: str
     description: str
-    origin: str = "CHECKLIST"  # CHECKLIST | AI
+    origin: str = "CHECKLIST"
 
     def is_ai_generated(self) -> bool:
         return self.origin.upper() == "AI"
 
 
-# ------------------------------------------------------------
-# TestCase
-# ------------------------------------------------------------
 @dataclass
 class TestCase:
-    """Représente un cas de test structuré."""
-
     test_id: str
     requirement_id: str
     title: str
@@ -86,12 +83,8 @@ class TestCase:
 
     def validate(self) -> None:
         if not self.test_id:
-            raise ValueError("test_id is mandatory")
-        if not self.requirement_id:
-            raise ValueError("requirement_id is mandatory")
-        if not self.title:
-            raise ValueError("title is mandatory")
+            raise ModelError("test_id obligatoire")
         if not self.steps:
-            raise ValueError("At least one test step is required")
+            raise ModelError("steps requis")
         if not self.expected_results:
-            raise ValueError("At least one expected result is required")
+            raise ModelError("expected_results requis")
