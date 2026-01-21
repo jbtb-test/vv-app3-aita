@@ -9,7 +9,7 @@ Ce fichier met en évidence **uniquement** les apports IA du snapshot de démo.
 - Les exigences **ne sont jamais modifiées**
 
 ## Snapshot summary
-- Baseline (no AI): `../outputs_no_ai/tests.md` + `tests.json`
+- Baseline (no AI): `../outputs_no_ai/tests_pack.md` + `tests_pack.json`
 - With AI: `./tests.md` + `tests.json`
 - Delta observé : **+4 tests** (1 suggestion IA par exigence)
 
