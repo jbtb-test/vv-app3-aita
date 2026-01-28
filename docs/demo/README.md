@@ -41,7 +41,6 @@ Même pipeline que le mode sans IA, avec en plus des
 
 - Pack de tests Markdown : `assets/outputs_ai/tests_pak.md`
 - Pack structuré JSON : `assets/outputs_ai/tests_pack.json`
-- Suggestions IA : `assets/outputs_ai/ai_suggestions.md`
 
 ➡️ L’IA **n’altère pas** les cas de test générés.  
 ➡️ Elle **propose uniquement**, sans décision automatique.
@@ -53,6 +52,7 @@ Même pipeline que le mode sans IA, avec en plus des
 ### Sans IA (déterministe)
 
 ```powershell
+. .\tools\load_env_secret.ps1
 $env:ENABLE_AI="0"
 python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ```

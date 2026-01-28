@@ -1,6 +1,6 @@
 # APP3 — AITA (AI-assisted Test Ideas & Traceability Accelerator)
 
-## TL;DR — Démo en 1 phrase
+## Démo en 1 phrase
 Outil orienté **test design (ISTQB)** qui génère un **pack de cas de test** (MD/JSON) à partir d’exigences,
 avec **IA optionnelle et non décisionnelle** pour suggérer des idées de tests,
 et des **outputs démontrables** (pack + rapport) consultables sur GitHub.
@@ -107,7 +107,9 @@ Accès direct :
 Ce mode correspond au fonctionnement nominal de l’outil
 (100 % déterministe, IA désactivée).
 
-```bash
+```powershell
+. .\tools\load_env_secret.ps1
+$env:ENABLE_AI="0"
 python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ```
 

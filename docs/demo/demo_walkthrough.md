@@ -54,6 +54,7 @@ le fonctionnement réel du pipeline.
 ### Commande (sans IA — référence V&V)
 
 ```powershell
+. .\tools\load_env_secret.ps1
 $env:ENABLE_AI="0"
 python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ```

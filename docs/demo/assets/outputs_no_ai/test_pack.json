@@ -1,14 +1,14 @@
 {
   "meta": {
-    "count": 28,
+    "count": 140,
     "format": "vv-app3-aita.test-pack.v1"
   },
   "tests": [
     {
-      "test_id": "TC-REQAITA001-BOUNDARY-35df9f1c",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[BOUNDARY] Authentication utilisateur",
-      "description": "Idea: Maximum boundary value\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ001-BOUNDARY-1f2b2194",
+      "requirement_id": "REQ-001",
+      "title": "[BOUNDARY] Emergency braking distance",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -22,14 +22,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-001-BND-2"
+        "REQ-001-BND-2"
       ]
     },
     {
-      "test_id": "TC-REQAITA001-BOUNDARY-39f6ce9d",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[BOUNDARY] Authentication utilisateur",
-      "description": "Idea: Minimum boundary value\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ001-BOUNDARY-997c48c8",
+      "requirement_id": "REQ-001",
+      "title": "[BOUNDARY] Emergency braking distance",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -43,35 +43,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-001-BND-1"
+        "REQ-001-BND-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA001-NEGATIVE-1bcf44ec",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[NEGATIVE] Authentication utilisateur",
-      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Invalid inputs rejected.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-001-NEG-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA001-NEGATIVE-850a4f32",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[NEGATIVE] Authentication utilisateur",
-      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ001-NEGATIVE-c8f36eba",
+      "requirement_id": "REQ-001",
+      "title": "[NEGATIVE] Emergency braking distance",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -85,14 +64,35 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-001-NEG-2"
+        "REQ-001-NEG-2"
       ]
     },
     {
-      "test_id": "TC-REQAITA001-POSITIVE-a668fc39",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[POSITIVE] Authentication utilisateur",
-      "description": "Idea: Nominal behavior\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ001-NEGATIVE-d4b4feff",
+      "requirement_id": "REQ-001",
+      "title": "[NEGATIVE] Emergency braking distance",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-001-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ001-POSITIVE-b93c7d5c",
+      "requirement_id": "REQ-001",
+      "title": "[POSITIVE] Emergency braking distance",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -106,14 +106,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-001-POS-1"
+        "REQ-001-POS-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA001-ROBUSTNESS-7df155d4",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[ROBUSTNESS] Authentication utilisateur",
-      "description": "Idea: Unexpected conditions\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ001-ROBUSTNESS-b1cd9784",
+      "requirement_id": "REQ-001",
+      "title": "[ROBUSTNESS] Emergency braking distance",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -127,14 +127,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-001-ROB-1"
+        "REQ-001-ROB-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA001-SECURITY-2922081e",
-      "requirement_id": "REQ-AITA-001",
-      "title": "[SECURITY] Authentication utilisateur",
-      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Le système doit permettre à un utilisateur autorisé de s’authentifier à l’aide d’un identifiant et d’un mot de passe valides.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ001-SECURITY-5d8b8cd6",
+      "requirement_id": "REQ-001",
+      "title": "[SECURITY] Emergency braking distance",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The braking system shall stop the train within 800 m when the emergency brake is applied at 160 km/h on dry track. Acceptance: Given speed = 160 km/h and emergency brake applied on dry track, then stopping distance <= 80\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -148,14 +148,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-001-SEC-1"
+        "REQ-001-SEC-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-BOUNDARY-62f0282a",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[BOUNDARY] Refus accès invalide",
-      "description": "Idea: Maximum boundary value\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-BOUNDARY-253f8662",
+      "requirement_id": "REQ-002",
+      "title": "[BOUNDARY] HMI status display clarity",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -169,14 +169,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-BND-2"
+        "REQ-002-BND-2"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-BOUNDARY-cde8d9db",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[BOUNDARY] Refus accès invalide",
-      "description": "Idea: Minimum boundary value\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-BOUNDARY-4030262d",
+      "requirement_id": "REQ-002",
+      "title": "[BOUNDARY] HMI status display clarity",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -190,14 +190,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-BND-1"
+        "REQ-002-BND-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-NEGATIVE-4f776ad3",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[NEGATIVE] Refus accès invalide",
-      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-NEGATIVE-1a88ce00",
+      "requirement_id": "REQ-002",
+      "title": "[NEGATIVE] HMI status display clarity",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -211,14 +211,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-NEG-2"
+        "REQ-002-NEG-2"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-NEGATIVE-dab50c53",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[NEGATIVE] Refus accès invalide",
-      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-NEGATIVE-5d9900e7",
+      "requirement_id": "REQ-002",
+      "title": "[NEGATIVE] HMI status display clarity",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -232,14 +232,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-NEG-1"
+        "REQ-002-NEG-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-POSITIVE-085ba0f2",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[POSITIVE] Refus accès invalide",
-      "description": "Idea: Nominal behavior\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-POSITIVE-116e4e47",
+      "requirement_id": "REQ-002",
+      "title": "[POSITIVE] HMI status display clarity",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -253,14 +253,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-POS-1"
+        "REQ-002-POS-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-ROBUSTNESS-cf163d49",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[ROBUSTNESS] Refus accès invalide",
-      "description": "Idea: Unexpected conditions\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-ROBUSTNESS-d7b535c6",
+      "requirement_id": "REQ-002",
+      "title": "[ROBUSTNESS] HMI status display clarity",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -274,14 +274,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-ROB-1"
+        "REQ-002-ROB-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA002-SECURITY-c778e083",
-      "requirement_id": "REQ-AITA-002",
-      "title": "[SECURITY] Refus accès invalide",
-      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Le système doit refuser l’accès si l’identifiant ou le mot de passe est incorrect.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ002-SECURITY-bc3fbad2",
+      "requirement_id": "REQ-002",
+      "title": "[SECURITY] HMI status display clarity",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The HMI should display the status quickly and clearly for the driver. Acceptance: (missing)\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -295,35 +295,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-002-SEC-1"
+        "REQ-002-SEC-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA003-BOUNDARY-40c9c996",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[BOUNDARY] Verrouillage après échecs",
-      "description": "Idea: Minimum boundary value\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Minimum boundary value.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-003-BND-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA003-BOUNDARY-7dfc8635",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[BOUNDARY] Verrouillage après échecs",
-      "description": "Idea: Maximum boundary value\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ003-BOUNDARY-3233761e",
+      "requirement_id": "REQ-003",
+      "title": "[BOUNDARY] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -337,119 +316,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-003-BND-2"
+        "REQ-003-BND-2"
       ]
     },
     {
-      "test_id": "TC-REQAITA003-NEGATIVE-c72f51bc",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[NEGATIVE] Verrouillage après échecs",
-      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Missing mandatory inputs.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-003-NEG-2"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA003-NEGATIVE-f7b2baf8",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[NEGATIVE] Verrouillage après échecs",
-      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Invalid inputs rejected.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-003-NEG-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA003-POSITIVE-f883ebe6",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[POSITIVE] Verrouillage après échecs",
-      "description": "Idea: Nominal behavior\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Nominal behavior.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-003-POS-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA003-ROBUSTNESS-0f1add6d",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[ROBUSTNESS] Verrouillage après échecs",
-      "description": "Idea: Unexpected conditions\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Unexpected conditions.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-003-ROB-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA003-SECURITY-c8e75bd0",
-      "requirement_id": "REQ-AITA-003",
-      "title": "[SECURITY] Verrouillage après échecs",
-      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Après 5 tentatives d’authentification échouées consécutives, le compte utilisateur doit être temporairement verrouillé.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Unauthorized access attempt.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-003-SEC-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA004-BOUNDARY-364a6e6e",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[BOUNDARY] Journalisation des accès",
-      "description": "Idea: Minimum boundary value\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ003-BOUNDARY-b05b0cd0",
+      "requirement_id": "REQ-003",
+      "title": "[BOUNDARY] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -463,56 +337,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-004-BND-1"
+        "REQ-003-BND-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA004-BOUNDARY-c1c7e8ab",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[BOUNDARY] Journalisation des accès",
-      "description": "Idea: Maximum boundary value\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Maximum boundary value.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-004-BND-2"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA004-NEGATIVE-cad49f71",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[NEGATIVE] Journalisation des accès",
-      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
-      "preconditions": [
-        "System is in a known initial state."
-      ],
-      "steps": [
-        "Prepare the system under test.",
-        "Execute the scenario for: Invalid inputs rejected.",
-        "Capture evidences (logs, outputs, system state)."
-      ],
-      "expected_results": [
-        "Observed behavior matches the requirement intent.",
-        "No unexpected side effects are observed."
-      ],
-      "source_ideas": [
-        "REQ-AITA-004-NEG-1"
-      ]
-    },
-    {
-      "test_id": "TC-REQAITA004-NEGATIVE-d65025f7",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[NEGATIVE] Journalisation des accès",
-      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ003-NEGATIVE-0b224d47",
+      "requirement_id": "REQ-003",
+      "title": "[NEGATIVE] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -526,14 +358,35 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-004-NEG-2"
+        "REQ-003-NEG-2"
       ]
     },
     {
-      "test_id": "TC-REQAITA004-POSITIVE-45ffff73",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[POSITIVE] Journalisation des accès",
-      "description": "Idea: Nominal behavior\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ003-NEGATIVE-663e8064",
+      "requirement_id": "REQ-003",
+      "title": "[NEGATIVE] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-003-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ003-POSITIVE-2424593a",
+      "requirement_id": "REQ-003",
+      "title": "[POSITIVE] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -547,14 +400,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-004-POS-1"
+        "REQ-003-POS-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA004-ROBUSTNESS-a20f47e5",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[ROBUSTNESS] Journalisation des accès",
-      "description": "Idea: Unexpected conditions\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ003-ROBUSTNESS-4c9ba37c",
+      "requirement_id": "REQ-003",
+      "title": "[ROBUSTNESS] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -568,14 +421,14 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-004-ROB-1"
+        "REQ-003-ROB-1"
       ]
     },
     {
-      "test_id": "TC-REQAITA004-SECURITY-a7ac0456",
-      "requirement_id": "REQ-AITA-004",
-      "title": "[SECURITY] Journalisation des accès",
-      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: Chaque tentative d’authentification (réussie ou échouée) doit être journalisée avec l’identifiant utilisateur et l’horodatage.\nOrigin: CHECKLIST",
+      "test_id": "TC-REQ003-SECURITY-944d30a9",
+      "requirement_id": "REQ-003",
+      "title": "[SECURITY] Infusion accuracy at 5 mL/h",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The infusion pump shall deliver 5 mL/h ± 5% for flow rates between 1 mL/h and 10 mL/h at 23°C with saline. Acceptance: Given setpoint = 5 mL/h, temperature = 23°C, fluid = saline, then measured average flow is within ±5%\nOrigin: CHECKLIST",
       "preconditions": [
         "System is in a known initial state."
       ],
@@ -589,7 +442,2506 @@
         "No unexpected side effects are observed."
       ],
       "source_ideas": [
-        "REQ-AITA-004-SEC-1"
+        "REQ-003-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-BOUNDARY-0185356e",
+      "requirement_id": "REQ-004",
+      "title": "[BOUNDARY] UDS diagnostic information availability",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-BOUNDARY-493cdb06",
+      "requirement_id": "REQ-004",
+      "title": "[BOUNDARY] UDS diagnostic information availability",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-NEGATIVE-02b156b4",
+      "requirement_id": "REQ-004",
+      "title": "[NEGATIVE] UDS diagnostic information availability",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-NEGATIVE-caac7eee",
+      "requirement_id": "REQ-004",
+      "title": "[NEGATIVE] UDS diagnostic information availability",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-POSITIVE-f63133eb",
+      "requirement_id": "REQ-004",
+      "title": "[POSITIVE] UDS diagnostic information availability",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-ROBUSTNESS-bba0bca3",
+      "requirement_id": "REQ-004",
+      "title": "[ROBUSTNESS] UDS diagnostic information availability",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ004-SECURITY-d8a50745",
+      "requirement_id": "REQ-004",
+      "title": "[SECURITY] UDS diagnostic information availability",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The ECU shall provide diagnostic information if needed. Acceptance: Diagnostic information includes DTC code, timestamp, and current operating mode available via UDS service 0x19 within 2 seconds after request.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-004-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-BOUNDARY-489f6298",
+      "requirement_id": "REQ-005",
+      "title": "[BOUNDARY] Navigation accuracy in nominal operation",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-BOUNDARY-bc986f1e",
+      "requirement_id": "REQ-005",
+      "title": "[BOUNDARY] Navigation accuracy in nominal operation",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-NEGATIVE-0e768455",
+      "requirement_id": "REQ-005",
+      "title": "[NEGATIVE] Navigation accuracy in nominal operation",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-NEGATIVE-da5cc6f2",
+      "requirement_id": "REQ-005",
+      "title": "[NEGATIVE] Navigation accuracy in nominal operation",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-POSITIVE-775bc784",
+      "requirement_id": "REQ-005",
+      "title": "[POSITIVE] Navigation accuracy in nominal operation",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-ROBUSTNESS-800f1163",
+      "requirement_id": "REQ-005",
+      "title": "[ROBUSTNESS] Navigation accuracy in nominal operation",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ005-SECURITY-962a3f82",
+      "requirement_id": "REQ-005",
+      "title": "[SECURITY] Navigation accuracy in nominal operation",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The navigation solution shall have high accuracy during normal operation. Acceptance: Accuracy shall be acceptable.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-005-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-BOUNDARY-67f1791e",
+      "requirement_id": "REQ-006",
+      "title": "[BOUNDARY] Navigation position error bound",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-BOUNDARY-d37778aa",
+      "requirement_id": "REQ-006",
+      "title": "[BOUNDARY] Navigation position error bound",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-NEGATIVE-10460012",
+      "requirement_id": "REQ-006",
+      "title": "[NEGATIVE] Navigation position error bound",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-NEGATIVE-af2faada",
+      "requirement_id": "REQ-006",
+      "title": "[NEGATIVE] Navigation position error bound",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-POSITIVE-93504d10",
+      "requirement_id": "REQ-006",
+      "title": "[POSITIVE] Navigation position error bound",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-ROBUSTNESS-b0da78de",
+      "requirement_id": "REQ-006",
+      "title": "[ROBUSTNESS] Navigation position error bound",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ006-SECURITY-6d5bc7de",
+      "requirement_id": "REQ-006",
+      "title": "[SECURITY] Navigation position error bound",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The navigation solution shall provide position error <= 10 m (95th percentile) in nominal flight conditions. Acceptance: Using reference trajectory, computed horizontal position error <= 10 m for at least 95% of samples \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-006-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-BOUNDARY-0db35c60",
+      "requirement_id": "REQ-007",
+      "title": "[BOUNDARY] Prevent unauthorized admin access",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-BOUNDARY-304be87b",
+      "requirement_id": "REQ-007",
+      "title": "[BOUNDARY] Prevent unauthorized admin access",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-NEGATIVE-74a72393",
+      "requirement_id": "REQ-007",
+      "title": "[NEGATIVE] Prevent unauthorized admin access",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-NEGATIVE-7a7746c1",
+      "requirement_id": "REQ-007",
+      "title": "[NEGATIVE] Prevent unauthorized admin access",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-POSITIVE-efdfac86",
+      "requirement_id": "REQ-007",
+      "title": "[POSITIVE] Prevent unauthorized admin access",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-ROBUSTNESS-08bbe2ad",
+      "requirement_id": "REQ-007",
+      "title": "[ROBUSTNESS] Prevent unauthorized admin access",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ007-SECURITY-fcacfb1b",
+      "requirement_id": "REQ-007",
+      "title": "[SECURITY] Prevent unauthorized admin access",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The system shall prevent unauthorized access to admin functions. Acceptance: Role-based access control is implemented.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-007-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-BOUNDARY-3d615072",
+      "requirement_id": "REQ-008",
+      "title": "[BOUNDARY] RBAC enforced + logging",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-BOUNDARY-49368c95",
+      "requirement_id": "REQ-008",
+      "title": "[BOUNDARY] RBAC enforced + logging",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-NEGATIVE-17ecc3b2",
+      "requirement_id": "REQ-008",
+      "title": "[NEGATIVE] RBAC enforced + logging",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-NEGATIVE-c7471922",
+      "requirement_id": "REQ-008",
+      "title": "[NEGATIVE] RBAC enforced + logging",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-POSITIVE-ed1a1450",
+      "requirement_id": "REQ-008",
+      "title": "[POSITIVE] RBAC enforced + logging",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-ROBUSTNESS-c7d679a9",
+      "requirement_id": "REQ-008",
+      "title": "[ROBUSTNESS] RBAC enforced + logging",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ008-SECURITY-12dcfcbf",
+      "requirement_id": "REQ-008",
+      "title": "[SECURITY] RBAC enforced + logging",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The system shall enforce RBAC such that only ADMIN role can access admin APIs, and all denied attempts are logged with user_id, timestamp and source IP. Acceptance: Attempt admin API with roles USER/OPERATOR: access deni\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-008-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-BOUNDARY-9191bcf3",
+      "requirement_id": "REQ-009",
+      "title": "[BOUNDARY] Wayside message latency nominal",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-BOUNDARY-e1cac965",
+      "requirement_id": "REQ-009",
+      "title": "[BOUNDARY] Wayside message latency nominal",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-NEGATIVE-5c461b4e",
+      "requirement_id": "REQ-009",
+      "title": "[NEGATIVE] Wayside message latency nominal",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-NEGATIVE-eaaa21a7",
+      "requirement_id": "REQ-009",
+      "title": "[NEGATIVE] Wayside message latency nominal",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-POSITIVE-f714aa6e",
+      "requirement_id": "REQ-009",
+      "title": "[POSITIVE] Wayside message latency nominal",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-ROBUSTNESS-31c3dc18",
+      "requirement_id": "REQ-009",
+      "title": "[ROBUSTNESS] Wayside message latency nominal",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ009-SECURITY-87a8c985",
+      "requirement_id": "REQ-009",
+      "title": "[SECURITY] Wayside message latency nominal",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms. Acceptance: Under nominal radio conditions (defined in test plan), end-to-end message latency <= 200 ms for 99% of 10,000 messages.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-009-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-BOUNDARY-691bcec0",
+      "requirement_id": "REQ-010",
+      "title": "[BOUNDARY] Wayside latency all conditions",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-BOUNDARY-a69ba717",
+      "requirement_id": "REQ-010",
+      "title": "[BOUNDARY] Wayside latency all conditions",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-NEGATIVE-12e045d3",
+      "requirement_id": "REQ-010",
+      "title": "[NEGATIVE] Wayside latency all conditions",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-NEGATIVE-8acd07c2",
+      "requirement_id": "REQ-010",
+      "title": "[NEGATIVE] Wayside latency all conditions",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-POSITIVE-a875b693",
+      "requirement_id": "REQ-010",
+      "title": "[POSITIVE] Wayside latency all conditions",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-ROBUSTNESS-91185c37",
+      "requirement_id": "REQ-010",
+      "title": "[ROBUSTNESS] Wayside latency all conditions",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ010-SECURITY-e162a1a8",
+      "requirement_id": "REQ-010",
+      "title": "[SECURITY] Wayside latency all conditions",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The onboard unit shall exchange messages with wayside within 200 ms in all conditions. Acceptance: Latency <= 200 ms in all conditions.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-010-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-BOUNDARY-21e5bc49",
+      "requirement_id": "REQ-011",
+      "title": "[BOUNDARY] Audible alarm on occlusion",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-BOUNDARY-90ffdada",
+      "requirement_id": "REQ-011",
+      "title": "[BOUNDARY] Audible alarm on occlusion",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-NEGATIVE-2a271438",
+      "requirement_id": "REQ-011",
+      "title": "[NEGATIVE] Audible alarm on occlusion",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-NEGATIVE-4c0c617b",
+      "requirement_id": "REQ-011",
+      "title": "[NEGATIVE] Audible alarm on occlusion",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-POSITIVE-d1d227c2",
+      "requirement_id": "REQ-011",
+      "title": "[POSITIVE] Audible alarm on occlusion",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-ROBUSTNESS-812e57ab",
+      "requirement_id": "REQ-011",
+      "title": "[ROBUSTNESS] Audible alarm on occlusion",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ011-SECURITY-9bdc38b2",
+      "requirement_id": "REQ-011",
+      "title": "[SECURITY] Audible alarm on occlusion",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The device shall raise an audible alarm when occlusion is detected. Acceptance: When occlusion is detected, alarm is audible.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-011-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-BOUNDARY-59272571",
+      "requirement_id": "REQ-012",
+      "title": "[BOUNDARY] Alarm timing + SPL",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-BOUNDARY-9d06dff4",
+      "requirement_id": "REQ-012",
+      "title": "[BOUNDARY] Alarm timing + SPL",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-NEGATIVE-2a6c264a",
+      "requirement_id": "REQ-012",
+      "title": "[NEGATIVE] Alarm timing + SPL",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-NEGATIVE-96dd02ce",
+      "requirement_id": "REQ-012",
+      "title": "[NEGATIVE] Alarm timing + SPL",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-POSITIVE-8a49383a",
+      "requirement_id": "REQ-012",
+      "title": "[POSITIVE] Alarm timing + SPL",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-ROBUSTNESS-1b5cf62a",
+      "requirement_id": "REQ-012",
+      "title": "[ROBUSTNESS] Alarm timing + SPL",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ012-SECURITY-23290c70",
+      "requirement_id": "REQ-012",
+      "title": "[SECURITY] Alarm timing + SPL",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The device shall raise an audible alarm within 2 seconds of occlusion detection, with sound pressure level >= 60 dBA at 1 meter. Acceptance: Trigger occlusion event verify alarm starts <= 2 s and SPL >= 60 dBA at 1 m in \nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-012-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-BOUNDARY-030606be",
+      "requirement_id": "REQ-013",
+      "title": "[BOUNDARY] Store at least 50 DTCs",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-BOUNDARY-43d570e4",
+      "requirement_id": "REQ-013",
+      "title": "[BOUNDARY] Store at least 50 DTCs",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-NEGATIVE-9ca3df2a",
+      "requirement_id": "REQ-013",
+      "title": "[NEGATIVE] Store at least 50 DTCs",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-NEGATIVE-eaab9a0b",
+      "requirement_id": "REQ-013",
+      "title": "[NEGATIVE] Store at least 50 DTCs",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-POSITIVE-303b8a35",
+      "requirement_id": "REQ-013",
+      "title": "[POSITIVE] Store at least 50 DTCs",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-ROBUSTNESS-da0bdd0f",
+      "requirement_id": "REQ-013",
+      "title": "[ROBUSTNESS] Store at least 50 DTCs",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ013-SECURITY-f3addb2e",
+      "requirement_id": "REQ-013",
+      "title": "[SECURITY] Store at least 50 DTCs",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The ECU shall store at least 50 DTCs. Acceptance: Using UDS, create DTC entries verify ECU stores >= 50 distinct DTCs and returns them via service 0x19.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-013-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-BOUNDARY-9520413f",
+      "requirement_id": "REQ-014",
+      "title": "[BOUNDARY] DTC storage reliability",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-BOUNDARY-fcc44eca",
+      "requirement_id": "REQ-014",
+      "title": "[BOUNDARY] DTC storage reliability",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-NEGATIVE-92916c31",
+      "requirement_id": "REQ-014",
+      "title": "[NEGATIVE] DTC storage reliability",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-NEGATIVE-eaca422b",
+      "requirement_id": "REQ-014",
+      "title": "[NEGATIVE] DTC storage reliability",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-POSITIVE-2af88583",
+      "requirement_id": "REQ-014",
+      "title": "[POSITIVE] DTC storage reliability",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-ROBUSTNESS-c430d04d",
+      "requirement_id": "REQ-014",
+      "title": "[ROBUSTNESS] DTC storage reliability",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ014-SECURITY-729254ba",
+      "requirement_id": "REQ-014",
+      "title": "[SECURITY] DTC storage reliability",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The ECU shall store DTCs reliably. Acceptance: DTCs shall not be lost.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-014-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-BOUNDARY-0bba097c",
+      "requirement_id": "REQ-015",
+      "title": "[BOUNDARY] Modem throughput 20 Mbps",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-BOUNDARY-73214751",
+      "requirement_id": "REQ-015",
+      "title": "[BOUNDARY] Modem throughput 20 Mbps",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-NEGATIVE-1d1d13a6",
+      "requirement_id": "REQ-015",
+      "title": "[NEGATIVE] Modem throughput 20 Mbps",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-NEGATIVE-a75d018d",
+      "requirement_id": "REQ-015",
+      "title": "[NEGATIVE] Modem throughput 20 Mbps",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-POSITIVE-d7660d93",
+      "requirement_id": "REQ-015",
+      "title": "[POSITIVE] Modem throughput 20 Mbps",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-ROBUSTNESS-5c817dbc",
+      "requirement_id": "REQ-015",
+      "title": "[ROBUSTNESS] Modem throughput 20 Mbps",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ015-SECURITY-964c8394",
+      "requirement_id": "REQ-015",
+      "title": "[SECURITY] Modem throughput 20 Mbps",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The modem shall support data rate up to 20 Mbps. Acceptance: With signal conditions per nominal spec, measured throughput >= 20 Mbps for at least 60 seconds.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-015-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-BOUNDARY-5e3bfc38",
+      "requirement_id": "REQ-016",
+      "title": "[BOUNDARY] Throughput with low jitter",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-BOUNDARY-f3931078",
+      "requirement_id": "REQ-016",
+      "title": "[BOUNDARY] Throughput with low jitter",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-NEGATIVE-5b0e3f87",
+      "requirement_id": "REQ-016",
+      "title": "[NEGATIVE] Throughput with low jitter",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-NEGATIVE-980ff14c",
+      "requirement_id": "REQ-016",
+      "title": "[NEGATIVE] Throughput with low jitter",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-POSITIVE-b45f429e",
+      "requirement_id": "REQ-016",
+      "title": "[POSITIVE] Throughput with low jitter",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-ROBUSTNESS-1d84bff5",
+      "requirement_id": "REQ-016",
+      "title": "[ROBUSTNESS] Throughput with low jitter",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ016-SECURITY-a9e4bb50",
+      "requirement_id": "REQ-016",
+      "title": "[SECURITY] Throughput with low jitter",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The modem shall support data rate up to 20 Mbps with low jitter. Acceptance: Throughput >= 20 Mbps and jitter is low.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-016-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-BOUNDARY-238dc1c1",
+      "requirement_id": "REQ-017",
+      "title": "[BOUNDARY] Field update capability",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-BOUNDARY-8f34cce9",
+      "requirement_id": "REQ-017",
+      "title": "[BOUNDARY] Field update capability",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-NEGATIVE-7d465118",
+      "requirement_id": "REQ-017",
+      "title": "[NEGATIVE] Field update capability",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-NEGATIVE-ae420137",
+      "requirement_id": "REQ-017",
+      "title": "[NEGATIVE] Field update capability",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-POSITIVE-ba50fa3d",
+      "requirement_id": "REQ-017",
+      "title": "[POSITIVE] Field update capability",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-ROBUSTNESS-c3ad349f",
+      "requirement_id": "REQ-017",
+      "title": "[ROBUSTNESS] Field update capability",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ017-SECURITY-d9e81e42",
+      "requirement_id": "REQ-017",
+      "title": "[SECURITY] Field update capability",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The software shall be updatable in the field. Acceptance: Update mechanism exists.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-017-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-BOUNDARY-6b23e187",
+      "requirement_id": "REQ-018",
+      "title": "[BOUNDARY] OTA update with rollback",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-BOUNDARY-93bd7b58",
+      "requirement_id": "REQ-018",
+      "title": "[BOUNDARY] OTA update with rollback",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-NEGATIVE-baf7d038",
+      "requirement_id": "REQ-018",
+      "title": "[NEGATIVE] OTA update with rollback",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-NEGATIVE-c0d6fb1f",
+      "requirement_id": "REQ-018",
+      "title": "[NEGATIVE] OTA update with rollback",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-POSITIVE-03391046",
+      "requirement_id": "REQ-018",
+      "title": "[POSITIVE] OTA update with rollback",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-ROBUSTNESS-623f240f",
+      "requirement_id": "REQ-018",
+      "title": "[ROBUSTNESS] OTA update with rollback",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ018-SECURITY-bb9ab45b",
+      "requirement_id": "REQ-018",
+      "title": "[SECURITY] OTA update with rollback",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The software shall support OTA update with rollback such that if update fails, system returns to previous version within 5 minutes without loss of configuration. Acceptance: Force update failure verify rollback completes\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-018-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-BOUNDARY-669b00dd",
+      "requirement_id": "REQ-019",
+      "title": "[BOUNDARY] System safety goal",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-BOUNDARY-ae3f2123",
+      "requirement_id": "REQ-019",
+      "title": "[BOUNDARY] System safety goal",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-NEGATIVE-0b0c6938",
+      "requirement_id": "REQ-019",
+      "title": "[NEGATIVE] System safety goal",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-NEGATIVE-ae629f28",
+      "requirement_id": "REQ-019",
+      "title": "[NEGATIVE] System safety goal",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-POSITIVE-193fdc1b",
+      "requirement_id": "REQ-019",
+      "title": "[POSITIVE] System safety goal",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-ROBUSTNESS-361b2c88",
+      "requirement_id": "REQ-019",
+      "title": "[ROBUSTNESS] System safety goal",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ019-SECURITY-4e4bc461",
+      "requirement_id": "REQ-019",
+      "title": "[SECURITY] System safety goal",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The system shall be safe. Acceptance: Complies with safety standards.\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-019-SEC-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-BOUNDARY-9422cdb4",
+      "requirement_id": "REQ-020",
+      "title": "[BOUNDARY] EN 50128 evidence package",
+      "description": "Idea: Maximum boundary value\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Maximum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-BND-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-BOUNDARY-d0dbbe8a",
+      "requirement_id": "REQ-020",
+      "title": "[BOUNDARY] EN 50128 evidence package",
+      "description": "Idea: Minimum boundary value\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Minimum boundary value.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-BND-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-NEGATIVE-9b49fb7d",
+      "requirement_id": "REQ-020",
+      "title": "[NEGATIVE] EN 50128 evidence package",
+      "description": "Idea: Missing mandatory inputs\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Missing mandatory inputs.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-NEG-2"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-NEGATIVE-ffc6aac7",
+      "requirement_id": "REQ-020",
+      "title": "[NEGATIVE] EN 50128 evidence package",
+      "description": "Idea: Invalid inputs rejected\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Invalid inputs rejected.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-NEG-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-POSITIVE-df478061",
+      "requirement_id": "REQ-020",
+      "title": "[POSITIVE] EN 50128 evidence package",
+      "description": "Idea: Nominal behavior\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Nominal behavior.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-POS-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-ROBUSTNESS-b0702fde",
+      "requirement_id": "REQ-020",
+      "title": "[ROBUSTNESS] EN 50128 evidence package",
+      "description": "Idea: Unexpected conditions\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unexpected conditions.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-ROB-1"
+      ]
+    },
+    {
+      "test_id": "TC-REQ020-SECURITY-3d13ab1a",
+      "requirement_id": "REQ-020",
+      "title": "[SECURITY] EN 50128 evidence package",
+      "description": "Idea: Unauthorized access attempt\nRequirement excerpt: The system shall demonstrate compliance with EN 50128 with evidence package including requirements, traceability, tests, and safety case artifacts. Acceptance: Evidence package is produced and reviewed with zero major no\nOrigin: CHECKLIST",
+      "preconditions": [
+        "System is in a known initial state."
+      ],
+      "steps": [
+        "Prepare the system under test.",
+        "Execute the scenario for: Unauthorized access attempt.",
+        "Capture evidences (logs, outputs, system state)."
+      ],
+      "expected_results": [
+        "Observed behavior matches the requirement intent.",
+        "No unexpected side effects are observed."
+      ],
+      "source_ideas": [
+        "REQ-020-SEC-1"
       ]
     }
   ]
