@@ -21,7 +21,7 @@ Contraintes :
 Usage :
     python -m vv_app3_aita.main --out-dir data/outputs --verbose
     (Mode IA)
-    . .\tools\load_env_secret.ps1
+    . .\\tools\\load_env_secret.ps1
     $env:ENABLE_AI="1"
     python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ============================================================
