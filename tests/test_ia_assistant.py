@@ -98,7 +98,7 @@ def test_generate_ai_test_ideas_enabled_with_key_returns_stub_idea(
     assert idea.idea_id == f"{sample_requirement.requirement_id}-AI-1"
     assert "IA-suggested" in idea.description
 
-    assert any("Appel IA simulé" in rec.message for rec in caplog.records)
+    assert any("IA (stub)" in rec.message for rec in caplog.records)
 
 
 def test_generate_ai_test_ideas_never_raises(sample_requirement: models.Requirement) -> None:

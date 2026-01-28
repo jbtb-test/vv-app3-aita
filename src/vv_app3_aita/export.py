@@ -6,15 +6,20 @@ APP3 — AITA
 ------------------------------------------------------------
 File: export.py
 
-Rôle :
+Description :
     Exporter un pack de tests (list[TestCase]) en :
       - JSON (audit, outillage)
       - Markdown (lecture recruteur)
 
+Rôle :
+    - Garantir des exports déterministes (ordre stable)
+    - Produire des artefacts lisibles offline (R3)
+    - Fallback-safe : pack vide => exports générés quand même
+
 Contraintes :
     - Déterministe (ordre stable)
     - Lisible recruteur (R3)
-    - Fallback-safe (pack vide => exports générés quand même)
+    - Fallback-safe
 
 API :
     export_test_pack_json(testcases, out_path, *, logger=None) -> None
@@ -24,25 +29,52 @@ API :
 
 from __future__ import annotations
 
+# ============================================================
+# 📦 Imports
+# ============================================================
 import json
 import logging
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Tuple
 
 from vv_app3_aita.models import TestCase
 
 _LOG = logging.getLogger(__name__)
 
 
+# ============================================================
+# 🔧 Helpers
+# ============================================================
 def _ensure_parent_dir(path: Path) -> None:
+    """Crée le dossier parent si nécessaire (idempotent)."""
     path.parent.mkdir(parents=True, exist_ok=True)
 
 
-def _sort_key(tc: TestCase) -> tuple[str, str]:
-    # Stable ordering: requirement_id then test_id
+def _sort_key(tc: TestCase) -> Tuple[str, str]:
+    """
+    Stable ordering key.
+
+    Sort order:
+        1) requirement_id
+        2) test_id
+    """
     return (tc.requirement_id, tc.test_id)
 
 
+def _validate_pack(testcases: list[TestCase]) -> None:
+    """
+    Valide le pack (audit proof).
+
+    Raises:
+        Exception: si un TestCase est invalide (tc.validate()).
+    """
+    for tc in testcases:
+        tc.validate()
+
+
+# ============================================================
+# 🔧 Fonctions principales (Exports)
+# ============================================================
 def export_test_pack_json(
     testcases: list[TestCase],
     out_path: str | Path,
@@ -50,21 +82,26 @@ def export_test_pack_json(
     logger: Optional[logging.Logger] = None,
 ) -> None:
     """
-    Export test pack as JSON.
+    Export du pack de tests au format JSON.
 
     JSON schema (simple & stable):
     {
       "meta": {"count": N, "format": "vv-app3-aita.test-pack.v1"},
       "tests": [ {TestCase dict}, ... ]
     }
+
+    Args:
+        testcases: pack de tests à exporter.
+        out_path: chemin de sortie JSON (str ou Path).
+        logger: logger optionnel (sinon logger module).
+
+    Returns:
+        None
     """
     log = logger or _LOG
     path = Path(out_path)
 
-    # Validate (audit proof)
-    for tc in testcases:
-        tc.validate()
-
+    _validate_pack(testcases)
     tests_sorted = sorted(testcases, key=_sort_key)
 
     payload = {
@@ -102,14 +139,20 @@ def export_test_pack_md(
     logger: Optional[logging.Logger] = None,
 ) -> None:
     """
-    Export test pack as Markdown (recruiter-friendly).
+    Export du pack de tests au format Markdown (recruiter-friendly).
+
+    Args:
+        testcases: pack de tests à exporter.
+        out_path: chemin de sortie Markdown (str ou Path).
+        logger: logger optionnel (sinon logger module).
+
+    Returns:
+        None
     """
     log = logger or _LOG
     path = Path(out_path)
 
-    for tc in testcases:
-        tc.validate()
-
+    _validate_pack(testcases)
     tests_sorted = sorted(testcases, key=_sort_key)
 
     lines: list[str] = []
@@ -126,7 +169,7 @@ def export_test_pack_md(
         lines.append("The pack is empty. Check inputs (requirements / test ideas).")
     else:
         # Group by requirement_id
-        current_req = None
+        current_req: Optional[str] = None
         for tc in tests_sorted:
             if tc.requirement_id != current_req:
                 current_req = tc.requirement_id
@@ -134,6 +177,7 @@ def export_test_pack_md(
 
             lines.append(f"### {tc.test_id} — {tc.title}")
             lines.append("")
+
             if tc.description:
                 lines.append(tc.description.strip())
                 lines.append("")

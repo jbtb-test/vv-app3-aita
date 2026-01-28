@@ -6,45 +6,63 @@ APP3 — AITA
 ------------------------------------------------------------
 File: main.py
 
-Rôle :
+Description :
     Point d’entrée CLI de l’application APP3 AITA.
 
+Rôle :
     Orchestre le pipeline de test design :
         requirements (CSV) -> test ideas -> test pack -> exports (MD / JSON)
 
-    IA optionnelle, suggestion-only, non bloquante.
+Contraintes :
+    - IA optionnelle (ENABLE_AI=1), suggestion-only, non bloquante
+    - Déterminisme prioritaire (tri stable des idées)
+    - Exports générés même si pack vide (fallback-safe)
+
+Usage :
+    python -m vv_app3_aita.main --out-dir data/outputs --verbose
+    (Mode IA)
+    . .\tools\load_env_secret.ps1
+    $env:ENABLE_AI="1"
+    python -m vv_app3_aita.main --out-dir data/outputs --verbose
 ============================================================
 """
 
 from __future__ import annotations
 
+# ============================================================
+# 📦 Imports
+# ============================================================
 import argparse
 import csv
 import logging
-import os
 import sys
 from pathlib import Path
-from typing import Optional
 
-from vv_app3_aita.models import ModelError, Requirement, TestIdea, TestCase
 from vv_app3_aita.checklist import generate_test_ideas
-from vv_app3_aita.ia_assistant import generate_ai_test_ideas
-from vv_app3_aita.generator import generate_test_pack
 from vv_app3_aita.export import export_test_pack_json, export_test_pack_md
+from vv_app3_aita.generator import generate_test_pack
+from vv_app3_aita.ia_assistant import generate_ai_test_ideas, is_ai_enabled
+from vv_app3_aita.models import ModelError, Requirement, TestCase, TestIdea
 
 
 # ============================================================
 # 🧾 Logging (local, autonome)
 # ============================================================
 def get_logger(name: str) -> logging.Logger:
+    """
+    Crée un logger stable (stderr), sans dépendance externe.
+    """
     logger = logging.getLogger(name)
     if not logger.handlers:
         handler = logging.StreamHandler(stream=sys.stderr)
-        formatter = logging.Formatter("%(asctime)s [%(levelname)s] [%(name)s] %(message)s")
-        handler.setFormatter(formatter)
+        fmt = logging.Formatter(
+            fmt="%(asctime)s [%(levelname)s] [%(name)s] %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+        )
+        handler.setFormatter(fmt)
         logger.addHandler(handler)
         logger.setLevel(logging.INFO)
-        # Avoid double logging when embedded or when root logger is configured elsewhere.
+        # Évite les doublons si un root logger est configuré ailleurs.
         logger.propagate = False
     return logger
 
@@ -53,7 +71,7 @@ log = get_logger(__name__)
 
 
 # ============================================================
-# ⚠️ Exceptions spécifiques
+# ⚠️ Exceptions spécifiques au module
 # ============================================================
 class ModuleError(Exception):
     """Erreur spécifique au module main (contrat public pour les tests)."""
@@ -64,12 +82,21 @@ class ModuleError(Exception):
 # ============================================================
 def load_requirements_csv(path: Path) -> list[Requirement]:
     """
-    Load requirements from CSV into Requirement objects.
+    Charge un CSV exigences en objets Requirement.
 
-    Expected columns (minimal):
+    Colonnes attendues (minimal) :
         requirement_id,title,description,criticality
-    Optional:
+    Optionnel :
         source
+
+    Args:
+        path: chemin du CSV.
+
+    Returns:
+        Liste de Requirement.
+
+    Raises:
+        ModuleError: fichier absent, CSV invalide, erreur de parsing modèle.
     """
     if not path.exists():
         raise ModuleError(f"Fichier d’entrée introuvable: {path}")
@@ -77,7 +104,6 @@ def load_requirements_csv(path: Path) -> list[Requirement]:
     try:
         text = path.read_text(encoding="utf-8-sig")
     except UnicodeDecodeError:
-        # fallback
         text = path.read_text(encoding="utf-8")
 
     reader = csv.DictReader(text.splitlines())
@@ -85,7 +111,7 @@ def load_requirements_csv(path: Path) -> list[Requirement]:
         raise ModuleError("CSV invalide: en-têtes absents")
 
     required = {"requirement_id", "title", "description", "criticality"}
-    missing = required - set([h.strip() for h in reader.fieldnames if h])
+    missing = required - {h.strip() for h in reader.fieldnames if h}
     if missing:
         raise ModuleError(f"CSV invalide: colonnes manquantes: {sorted(missing)}")
 
@@ -99,47 +125,51 @@ def load_requirements_csv(path: Path) -> list[Requirement]:
     return reqs
 
 
-from typing import Optional
-
-def build_ideas(requirements: list[Requirement], *, enable_ai: bool) -> list[TestIdea]:
+# ============================================================
+# 🔧 Core pipeline helpers
+# ============================================================
+def build_ideas(requirements: list[Requirement]) -> list[TestIdea]:
     """
-    Build test ideas from checklist + optional AI.
+    Construit les idées de tests (checklist + IA optionnelle).
 
-    - Deterministic ordering
-    - AI is suggestion-only and never blocks
-    - No permanent side-effect on environment variables
+    - Checklist : toujours active (déterministe)
+    - IA : active uniquement si ENABLE_AI=1 (suggestion-only, non bloquant)
+
+    Args:
+        requirements: exigences en entrée.
+
+    Returns:
+        Liste d’objets TestIdea (tri stable).
     """
     ideas: list[TestIdea] = []
 
-    # Checklist ideas (deterministic, always executed)
+    # Checklist ideas (always executed)
     for r in requirements:
         ideas.extend(generate_test_ideas(r))
 
-    # Optional AI ideas
-    # Temporarily align with ia_assistant contract via env var,
-    # then restore previous state to avoid global side-effects.
-    previous_enable_ai: Optional[str] = os.getenv("ENABLE_AI")
-    try:
-        os.environ["ENABLE_AI"] = "1" if enable_ai else "0"
-        if enable_ai:
-            for r in requirements:
-                ideas.extend(generate_ai_test_ideas(r))
-    finally:
-        if previous_enable_ai is None:
-            os.environ.pop("ENABLE_AI", None)
-        else:
-            os.environ["ENABLE_AI"] = previous_enable_ai
+    # Optional AI ideas (ENABLE_AI=1 uniquement)
+    if is_ai_enabled():
+        log.info("IA activée via ENABLE_AI=1 (suggestion-only)")
+        for r in requirements:
+            ideas.extend(generate_ai_test_ideas(r))
+    else:
+        log.info("IA désactivée (ENABLE_AI!=1)")
 
     # Stable sort for auditability
-    ideas.sort(key=lambda i: (i.requirement_id, i.category.upper(), i.idea_id))
+    ideas.sort(key=lambda i: (i.requirement_id, (i.category or "").upper(), i.idea_id))
     return ideas
-
 
 
 # ============================================================
 # 🔧 CLI
 # ============================================================
 def build_arg_parser() -> argparse.ArgumentParser:
+    """
+    Construit le parser CLI.
+
+    Returns:
+        argparse.ArgumentParser
+    """
     parser = argparse.ArgumentParser(
         prog="vv-app3-aita",
         description=(
@@ -163,12 +193,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
     )
 
     parser.add_argument(
-        "--enable-ai",
-        action="store_true",
-        help="Active les suggestions IA (non bloquant, suggestion-only)",
-    )
-
-    parser.add_argument(
         "--verbose",
         action="store_true",
         help="Logs verbeux",
@@ -178,6 +202,15 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def process(args: argparse.Namespace) -> None:
+    """
+    Exécute le pipeline complet (hors parsing CLI).
+
+    Args:
+        args: arguments CLI déjà parsés.
+
+    Raises:
+        ModuleError: en cas d’entrée invalide ou d’erreur contrôlée.
+    """
     log.info("Démarrage APP3 AITA")
     log.debug("Arguments CLI: %s", args)
 
@@ -187,7 +220,7 @@ def process(args: argparse.Namespace) -> None:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
-    ideas = build_ideas(reqs, enable_ai=bool(args.enable_ai))
+    ideas = build_ideas(reqs)
     if not ideas:
         log.warning("Aucune idée de test générée (checklist/IA).")
 
@@ -208,6 +241,18 @@ def process(args: argparse.Namespace) -> None:
 # ▶️ Main
 # ============================================================
 def main(argv: list[str] | None = None) -> int:
+    """
+    Point d’entrée CLI (module exécutable).
+
+    Args:
+        argv: argv optionnel (tests), sinon sys.argv.
+
+    Returns:
+        Code retour:
+            0 = OK
+            1 = erreur contrôlée (ModuleError)
+            2 = erreur inattendue
+    """
     try:
         parser = build_arg_parser()
         args = parser.parse_args(argv)
